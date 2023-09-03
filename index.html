@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container ">
+        <h1 class="justify-content-center py-2" >Carrito-DOM</h1>
+        <hr>
+        <div class="row justify-content-center" id="cards">
+            <!-- aquí van los template de productos -->
+        </div>
+        
+        <h3>Carrito de compras</h3>
+        <hr>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Acción</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <!-- cuerpo de tabla -->
+            <tbody id="items">
+                <!-- acá va template-carrito -->
+            </tbody>
+            <tfoot>
+              <tr id="footer">
+                <!-- <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th> -->
+              </tr>
+            </tfoot>
+          </table>
+
+        
+
+    </div>
+    <template id="template-card">
+        <div class="col-8 mb-2  col-sm-6 col-md-3">
+            <div class="card">
+                <img src="" alt="" class="card-img-top ">
+                <div class="card-body">
+                    <h5>Titulo</h5>
+                    <p>precio</p>
+                    <button class="btn btn-dark" >Comprar</button>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </template>
+    <!-- cuerpo del carrito -->
+    <template id="template-carrito">
+        <tr>
+            <th scope="row">id</th>
+            <td>café</td>
+            <td>1</td>
+            <td class="col-3">
+                <button class="btn btn-info btn-sm">+</button>
+                <button class="btn btn-danger btn-sm">-</button>
+            </td>
+            <td class="col-3">$ <span>500</span></td>
+        </tr>
+
+
+    </template>
+    <!-- footer del carrito -->
+    <template id="template-footer">
+    <th scope="row" colspan="2">Total productos</th>
+    <td class="cantidades fw-bold">10</td>
+    <td>
+            <button class="btn btn-danger btn-sm" id="vaciar-carrito">Vaciar carrito</button>
+    </td>
+    <td class="fw-bold">$<span>500</span></td>
+
+    </template>
+    
+
+    
+</body>
+<script src="app.js"></script>
+</html>
